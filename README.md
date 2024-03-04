@@ -6,8 +6,6 @@
 <br/>
 
 # Group Member Details
-<hr/>
+
 ## Group Leader - IT21170584 - Sithumini K.G.P 
 ## Member 1 - IT21173318 - Adhikari A.M.S.S
-##
-##
