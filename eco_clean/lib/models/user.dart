@@ -6,9 +6,21 @@ class Users {
   String role;
   String uuid;
 
-  Users();
+  Users()
+      : displayName = '',
+        email = '',
+        password = '',
+        phone = '',
+        role = '',
+        uuid = '';
 
-  Users.fromMap(Map<String, dynamic> data) {
+  Users.fromMap(Map<String, dynamic> data)
+      : displayName = '',
+        email = '',
+        password = '',
+        phone = '',
+        role = '',
+        uuid = '' {
     displayName = data['displayName'];
     email = data['email'];
     password = data['password'];
