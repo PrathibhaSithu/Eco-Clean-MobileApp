@@ -23,4 +23,9 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class LandingPage extend
+class LandingPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
