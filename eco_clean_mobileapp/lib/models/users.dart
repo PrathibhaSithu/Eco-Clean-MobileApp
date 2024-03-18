@@ -1,10 +1,10 @@
 class Users {
-  String? displayName;
-  String? email;
-  String? password;
-  String? phone;
-  String? role;
-  String? uuid;
+  late String displayName;
+  String email;
+  String password;
+  late String phone;
+  late String role;
+  late String uuid;
 
   Users();
 
