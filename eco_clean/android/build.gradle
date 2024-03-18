@@ -17,5 +17,7 @@ tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
 dependencies {
-    id "com.google.gms.google-services"
+    classpath 'com.android.tools.build:gradle:7.1.2'
+    classpath 'com.google.gms:google-services:4.3.13'
+    id("com.google.gms.google-services") version "4.4.1" apply false
 }
