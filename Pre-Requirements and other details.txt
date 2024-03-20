@@ -6,3 +6,10 @@ Firebase Install
 		 https://firebase.google.com/docs/cli?hl=en&authuser=0&_gl=1*1fv4vuh*_ga*NDA5OTU1MDk0LjE3MDY1MDIxMzA.*_ga_CW55HF8NVT*MTcxMDgyNzU5Ni42LjAuMTcxMDgyNzU5Ni42MC4wLjA.#install-cli-windows
 
 Pub Dev 	https://pub.dev/
+
+Temp Login user name passwords
+				test@gmail.com
+				123456
+
+				haha@gmail.com
+				2456810
