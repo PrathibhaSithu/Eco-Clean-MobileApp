@@ -5,7 +5,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 class Wrapper extends StatefulWidget {
-  const Wrapper({super.key});
+  Wrapper({super.key});
+
   @override
   State<Wrapper> createState() => _WrapperState();
 }
