@@ -13,3 +13,6 @@ Temp Login user name passwords
 
 				haha@gmail.com
 				2456810
+				
+				adme@gmail.com
+				adme123
