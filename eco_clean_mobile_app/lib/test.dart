@@ -28,27 +28,9 @@ class _TestState extends State<Test> {
   }
 }
 
-// StreamBuilder(
-// stream: FirebaseAuth.instance.authStateChanges(),
-// builder: (context, snapshot) {
-//       if (snapshot.hasData) {
-//       User user = snapshot.data as User;
-//       String email = user.email;
-//       if (email == 'test@gmail.com') {
-//       return Homepage1();
-//       } else if (email == 'haha@gmail.com') {
-//       return Homepage2();
-//       } else if (email == 'adme@gmail.com') {
-//       return Homepage3();
-//       } else {
-//       // If none of the above conditions are met, return a default homepage
-//       return Homepage();
-//       }
-//       } else {
-//       return Login();
-// }
-// },
-// ),
+// import 'package:firebase_auth/firebase_auth.dart';
+// import 'package:flutter/material.dart';
+// import 'package:firebase_core/firebase_core.dart';
 
 //
 // StreamBuilder(
