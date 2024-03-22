@@ -1,5 +1,11 @@
+import 'package:eco_clean_mobile_app/user/usercategories.dart';
+import 'package:eco_clean_mobile_app/user/userlocation.dart';
+import 'package:eco_clean_mobile_app/user/usermorelist.dart';
+import 'package:eco_clean_mobile_app/user/usershopping.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+
+import '../user/userhome.dart';
 
 class BottomNavUser extends StatefulWidget {
   const BottomNavUser({super.key});
@@ -10,7 +16,13 @@ class BottomNavUser extends StatefulWidget {
 
 class _BottomNavUserState extends State<BottomNavUser> {
   int myCurrentIndex = 0;
-  List pages = const[];
+  List pages = const[
+    UserHome(),
+    UserLocation(),
+    UserShopping(),
+    UserCategories(),
+    UserMoreList()
+  ];
 
 
   final user = FirebaseAuth.instance.currentUser;
@@ -23,6 +35,7 @@ class _BottomNavUserState extends State<BottomNavUser> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: myCurrentIndex,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -46,13 +59,7 @@ class _BottomNavUserState extends State<BottomNavUser> {
           ),
         ],
       ),
-      body: Center(
-        child: Text('${user!.email}'),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: (()=> signout()),
-        child: const Icon(Icons.login_rounded),
-      ),
+      body: pages[myCurrentIndex],
     );
   }
 }

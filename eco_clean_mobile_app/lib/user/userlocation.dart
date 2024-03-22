@@ -11,7 +11,11 @@ class UserLocation extends StatefulWidget {
 class _UserLocationState extends State<UserLocation> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(
+      body: Center(
+        child: Text('Locations'),
+      ),
+    );
   }
 }
 

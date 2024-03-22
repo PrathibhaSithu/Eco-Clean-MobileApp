@@ -11,7 +11,11 @@ class UserCategories extends StatefulWidget {
 class _UserCategoriesState extends State<UserCategories> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(
+      body: Center(
+        child: Text('Categories'),
+      ),
+    );
   }
 }
 
