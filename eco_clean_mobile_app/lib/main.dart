@@ -5,6 +5,7 @@ import 'package:eco_clean_mobile_app/wrapper.dart';
 import 'firebase_options.dart';
 
 
+
 void main() async{
   runApp(MyApp());
   await Firebase.initializeApp(options: DefaultFirebaseOptions.android);
@@ -39,56 +40,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home: Wrapper(),
-      // home:  Scaffold(
-      //   appBar: AppBar(
-      //     title: Text('Login'),
-      //   ),
-      //   body: Column(
-      //     mainAxisAlignment: MainAxisAlignment.center,
-      //     crossAxisAlignment: CrossAxisAlignment.center,
-      //     children: [
-      //       Text(
-      //         "Login Area",
-      //         style: TextStyle(
-      //             fontSize: 35,
-      //             color: Colors.teal,
-      //             fontWeight: FontWeight.bold),
-      //       ),
-      //       Form(
-      //           child: Column(
-      //             children: [
-      //               TextFormField(
-      //                 keyboardType: TextInputType.emailAddress,
-      //                 decoration: InputDecoration(
-      //                     labelText: 'Email',
-      //                     hintText: 'Enter email',
-      //                     prefixIcon: Icon(Icons.email),
-      //                     border: OutlineInputBorder()),
-      //                 onChanged: (String value) {},
-      //                 validator: (value) {
-      //                   return value!.isEmpty ? 'please enter email' : null;
-      //                 },
-      //               ),
-      //               SizedBox(
-      //                 height: 30,
-      //               ),
-      //               TextFormField(
-      //                 keyboardType: TextInputType.visiblePassword,
-      //                 decoration: InputDecoration(
-      //                     labelText: 'Password',
-      //                     hintText: 'Enter Password',
-      //                     prefixIcon: Icon(Icons.password),
-      //                     border: OutlineInputBorder()),
-      //                 onChanged: (String value) {},
-      //                 validator: (value) {
-      //                   return value!.isEmpty ? 'please enter password' : null;
-      //                 },
-      //               )
-      //             ],
-      //           ))
-      //     ],
-      //   ),
-      // ),
+
     );
   }
 }
