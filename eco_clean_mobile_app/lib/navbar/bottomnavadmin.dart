@@ -3,8 +3,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
+import '../admin/admindashboard.dart';
+import '../admin/adminhome.dart';
 import '../admin/adminmorelist.dart';
-import '../user/userhome.dart';
+import '../admin/adminmap.dart';
+import '../admin/adminnotification.dart';
 
 class BottomNavAdmin extends StatefulWidget {
   const BottomNavAdmin({super.key});
@@ -55,15 +58,19 @@ class _BottomNavAdminState extends State<BottomNavAdmin> {
               ),
               BottomNavigationBarItem(
                 icon: Image.asset('assets/icons/admin-dash.png', width: 24, height: 24),
-                label: 'Location',
+                label: 'Dashboard',
               ),
               BottomNavigationBarItem(
                 icon: Image.asset('assets/icons/location.png', width: 24, height: 24),
-                label: 'Buy',
+                label: 'Map',
+              ),
+              BottomNavigationBarItem(
+                icon: Image.asset('assets/icons/bell.png', width: 24, height: 24),
+                label: 'Notifications',
               ),
               BottomNavigationBarItem(
                 icon: Image.asset('assets/icons/cat.png', width: 24, height: 24),
-                label: 'Category',
+                label: 'More',
               ),
             ],
           ),

@@ -55,15 +55,15 @@ class _BottomNavCollectorState extends State<BottomNavCollector> {
               ),
               BottomNavigationBarItem(
                 icon: Image.asset('assets/icons/location.png', width: 24, height: 24),
-                label: 'Location',
+                label: 'Map',
               ),
               BottomNavigationBarItem(
                 icon: Image.asset('assets/icons/bell.png', width: 24, height: 24),
-                label: 'Buy',
+                label: 'Notifications',
               ),
               BottomNavigationBarItem(
                 icon: Image.asset('assets/icons/user.png', width: 24, height: 24),
-                label: 'Category',
+                label: 'More',
               ),
             ],
           ),
