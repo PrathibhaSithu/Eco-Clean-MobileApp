@@ -25,13 +25,6 @@ class _BottomNavUserState extends State<BottomNavUser> {
     UserMoreList()
   ];
 
-
-  final user = FirebaseAuth.instance.currentUser;
-
-  signout() async {
-    await FirebaseAuth.instance.signOut();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,25 +51,25 @@ class _BottomNavUserState extends State<BottomNavUser> {
                 myCurrentIndex = index;
               });
             },
-            items: const [
+            items: [
               BottomNavigationBarItem(
-                icon: Icon(Icons.home),
+                icon: Image.asset('assets/icons/home.png', width: 24, height: 24),
                 label: "Home",
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.location_on_rounded),
+                icon: Image.asset('assets/icons/location.png', width: 24, height: 24),
                 label: 'Location',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.shopping_cart),
+                icon: Image.asset('assets/icons/shopping-cart.png', width: 24, height: 24),
                 label: 'Buy',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.category),
+                icon: Image.asset('assets/icons/cat.png', width: 24, height: 24),
                 label: 'Category',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.person),
+                icon: Image.asset('assets/icons/user.png', width: 24, height: 24),
                 label: 'More',
               ),
             ],
