@@ -2,19 +2,19 @@
 import 'package:flutter/material.dart';
 // import 'package:firebase_core/firebase_core.dart';
 
-class CollectorLocation extends StatefulWidget {
-  const CollectorLocation({super.key});
+class CollectorMap extends StatefulWidget {
+  const CollectorMap({super.key});
 
   @override
-  State<CollectorLocation> createState() => _CollectorLocationState();
+  State<CollectorMap> createState() => _CollectorMapState();
 }
 
-class _CollectorLocationState extends State<CollectorLocation> {
+class _CollectorMapState extends State<CollectorMap> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text('Collector Locations'),
+        child: Text('Collector Map'),
       ),
     );
   }

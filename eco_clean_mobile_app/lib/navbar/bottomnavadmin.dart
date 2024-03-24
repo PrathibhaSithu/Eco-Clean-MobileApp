@@ -3,16 +3,17 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
+import '../admin/adminmorelist.dart';
 import '../user/userhome.dart';
 
-class BottomNavCollector extends StatefulWidget {
-  const BottomNavCollector({super.key});
+class BottomNavAdmin extends StatefulWidget {
+  const BottomNavAdmin({super.key});
 
   @override
-  State<BottomNavCollector> createState() => _BottomNavCollectorState();
+  State<BottomNavAdmin> createState() => _BottomNavAdminState();
 }
 
-class _BottomNavCollectorState extends State<BottomNavCollector> {
+class _BottomNavAdminState extends State<BottomNavAdmin> {
   int myCurrentIndex = 0;
   List pages = const[
     AdminHome(),
@@ -53,15 +54,15 @@ class _BottomNavCollectorState extends State<BottomNavCollector> {
                 label: "Home",
               ),
               BottomNavigationBarItem(
-                icon: Image.asset('assets/icons/location.png', width: 24, height: 24),
+                icon: Image.asset('assets/icons/admin-dash.png', width: 24, height: 24),
                 label: 'Location',
               ),
               BottomNavigationBarItem(
-                icon: Image.asset('assets/icons/bell.png', width: 24, height: 24),
+                icon: Image.asset('assets/icons/location.png', width: 24, height: 24),
                 label: 'Buy',
               ),
               BottomNavigationBarItem(
-                icon: Image.asset('assets/icons/user.png', width: 24, height: 24),
+                icon: Image.asset('assets/icons/cat.png', width: 24, height: 24),
                 label: 'Category',
               ),
             ],

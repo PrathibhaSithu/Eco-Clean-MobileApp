@@ -1,12 +1,11 @@
-import 'package:eco_clean_mobile_app/user/usercategories.dart';
-import 'package:eco_clean_mobile_app/user/userlocation.dart';
-import 'package:eco_clean_mobile_app/user/usermorelist.dart';
-import 'package:eco_clean_mobile_app/user/usershopping.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-import '../user/userhome.dart';
+import '../collector/collectorhome.dart';
+import '../collector/collectormap.dart';
+import '../collector/collectormorelist.dart';
+import '../collector/collectornotification.dart';
 
 class BottomNavCollector extends StatefulWidget {
   const BottomNavCollector({super.key});

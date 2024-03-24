@@ -1,11 +1,8 @@
-import 'package:eco_clean_mobile_app/homepage.dart';
 import 'package:eco_clean_mobile_app/login.dart';
-import 'package:eco_clean_mobile_app/userh.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'adminh.dart';
-import 'collectorh.dart';
+import 'navbar/bottomnavadmin.dart';
 import 'navbar/bottomnavcollector.dart';
 import 'navbar/bottomnavuser.dart';
 
@@ -35,7 +32,7 @@ class _WrapperState extends State<Wrapper> {
             return BottomNavAdmin();
             } else {
             // If none of the above conditions are met, return a default homepage
-            return UserH();
+            return BottomNavUser();
             }
             } else {
             return Login();
