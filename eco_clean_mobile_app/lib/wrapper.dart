@@ -6,6 +6,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'adminh.dart';
 import 'collectorh.dart';
+import 'navbar/bottomnavcollector.dart';
 import 'navbar/bottomnavuser.dart';
 
 class Wrapper extends StatefulWidget {
@@ -29,9 +30,9 @@ class _WrapperState extends State<Wrapper> {
             if (email == 'test@gmail.com') {
             return BottomNavUser();
             } else if (email == 'haha@gmail.com') {
-            return CollectorH();
+            return BottomNavCollector();
             } else if (email == 'adme@gmail.com') {
-            return AdminH();
+            return BottomNavAdmin();
             } else {
             // If none of the above conditions are met, return a default homepage
             return UserH();

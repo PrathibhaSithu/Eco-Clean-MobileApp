@@ -1,7 +1,4 @@
-import 'package:eco_clean_mobile_app/user/usercategories.dart';
-import 'package:eco_clean_mobile_app/user/userlocation.dart';
-import 'package:eco_clean_mobile_app/user/usermorelist.dart';
-import 'package:eco_clean_mobile_app/user/usershopping.dart';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -18,10 +15,11 @@ class BottomNavCollector extends StatefulWidget {
 class _BottomNavCollectorState extends State<BottomNavCollector> {
   int myCurrentIndex = 0;
   List pages = const[
-    CollectorHome(),
-    CollectorMap(),
-    CollectorNotification(),
-    CollectorMoreList()
+    AdminHome(),
+    AdminDashboard(),
+    AdminMap(),
+    AdminNotification(),
+    AdminMoreList()
   ];
 
   @override

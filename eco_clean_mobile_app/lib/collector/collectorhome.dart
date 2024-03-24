@@ -19,20 +19,10 @@ class _CollectorHomeState extends State<CollectorHome> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Scaffold(
-          body: SingleChildScrollView(
-            child: Center(
-              child: Text('${user!.email}'),
-            ),
-          ),
-          floatingActionButton: FloatingActionButton(
-            onPressed: (()=> signout()),
-            child: const Icon(Icons.login_rounded),
-          ),
-        ),
-      ],
+    return Scaffold(
+      body: Center(
+        child: Text('${user!.email}'),
+      ),
     );
   }
 }

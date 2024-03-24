@@ -20,26 +20,10 @@ class _UserHomeState extends State<UserHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Padding(
-          padding:  EdgeInsets.all(8.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Center(
-                child: Text('${user!.email}'),
-              ),
-
-              Expanded(
-                child: Container(),
-              ),
-              SizedBox(height: MediaQuery.of(context).padding.bottom),
-            ],
-          ),
-        ),
-      ),
-
-    );
+      body: Center(
+                  child: Text('${user!.email}'),
+                ),
+            );
   }
 }
 
