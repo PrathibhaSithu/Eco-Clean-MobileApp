@@ -1,4 +1,4 @@
-# Project Topic - Mobile Application for Garbage Management System 
+# Topic - Mobile Application for Garbage Management System 
 # Project Name -Eco Clean Mobile Application 
 
 ## Developed Using :
