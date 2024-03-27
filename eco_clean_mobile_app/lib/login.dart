@@ -30,12 +30,18 @@ class _LoginState extends State<Login> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+          // Add an image at the top of the screen
+          Column(
             children: [
+              const Text("Login"),
               // Add an image at the top of the screen
               Image.asset(
-                'assets/imges/reg.png',
+                'assets/imges/login.png',
                 height: 350,
               ),
+              ]
+      ),
               // Wrap the login form in a container
               IntrinsicWidth(
                 child: IntrinsicHeight(
