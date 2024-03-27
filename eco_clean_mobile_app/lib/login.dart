@@ -1,5 +1,8 @@
+import 'package:eco_clean_mobile_app/register.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+//import 'package:firebase_core/firebase_core.dart';
+
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -9,9 +12,10 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  final TextEditingController email = TextEditingController();
+  final TextEditingController password = TextEditingController();
 
-  TextEditingController email = TextEditingController();
-  TextEditingController password = TextEditingController();
+  bool _hidePassword = true;
 
   signIn() async {
     await FirebaseAuth.instance.signInWithEmailAndPassword(email: email.text, password: password.text);
@@ -20,32 +24,100 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Login'),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(28.0),
-        child: Column(
-          children: [
-            TextField(
-              controller: email,
-              decoration: const InputDecoration(
-                hintText: 'Email',
+      backgroundColor: const Color(0xFFC4E8C2),
+      body: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              // Add an image at the top of the screen
+              Image.asset(
+                'assets/imges/reg.png',
+                height: 350,
               ),
-            ),
-            TextField(
-              controller: password,
-              decoration: const InputDecoration(
-                hintText: 'Password',
+              // Wrap the login form in a container
+              IntrinsicWidth(
+                child: IntrinsicHeight(
+                  child: Container(
+                    padding: const EdgeInsets.all(20.0),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    width: 400,
+                    child: Column(
+                      children: [
+                        TextField(
+                          controller: email,
+                          decoration: const InputDecoration(
+                            hintText: 'Email',
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                        StatefulBuilder(
+                          builder: (BuildContext context, setState) {
+                            return TextField(
+                              controller: password,
+                              obscureText: _hidePassword,
+                              decoration: InputDecoration(
+                                hintText: 'Password',
+                                suffixIcon: IconButton(
+                                  icon: Icon(
+                                    _hidePassword ? Icons.visibility_off : Icons.visibility,
+                                  ),
+                                  onPressed: () {
+                                    setState(() {
+                                      _hidePassword = !_hidePassword;
+                                    });
+                                  },
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                        const SizedBox(height: 20),
+                        ElevatedButton(
+                          onPressed: () {
+                            signIn();
+                          },
+                          child: const Text("Login"),
+                        ),
+                        const SizedBox(height: 20),
+                        TextButton(
+                          onPressed: () {
+                            // Navigate to the `Register` page
+                            // Navigator.push(
+                            //   context,
+                            //   MaterialPageRoute(
+                            //     builder: (BuildContext context) {
+                            //        return Register();
+                            //     },
+                            //   ),
+                            // );
+                            // Navigate to the `Register` page
+                              Navigator.push(context, 'register' as Route<Object?>);
+                            },
+                            child: const Text("Not a user? Register"),
+                            ),
+                        //   child: const Text("Not a user? Register"),
+                        // ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
-            ),
-            ElevatedButton(
-              onPressed: (()=>signIn()),
-              child: const Text("Login"),
-            ),
-          ],
+            ],
+          ),
         ),
-      )
+      ),
     );
+  }
+
+  @override
+  void dispose() {
+    email.dispose();
+    password.dispose();
+    super.dispose();
   }
 }

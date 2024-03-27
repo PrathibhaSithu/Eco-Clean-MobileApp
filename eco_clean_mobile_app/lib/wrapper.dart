@@ -1,10 +1,11 @@
 import 'package:eco_clean_mobile_app/login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
+//import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'navbar/bottomnavadmin.dart';
 import 'navbar/bottomnavcollector.dart';
 import 'navbar/bottomnavuser.dart';
+import 'package:eco_clean_mobile_app/register.dart';
 
 class Wrapper extends StatefulWidget {
   Wrapper({super.key});
@@ -32,7 +33,7 @@ class _WrapperState extends State<Wrapper> {
             return BottomNavAdmin();
             } else {
             // If none of the above conditions are met, return a default homepage
-            return BottomNavUser();
+            return Login();
             }
             } else {
             return Login();
