@@ -14,7 +14,7 @@ class _CollectorMapState extends State<CollectorMap> {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text('Collector Map shashi'),
+        child: Text('Collector Map shashi with new branch'),
       ),
     );
   }
