@@ -80,7 +80,7 @@ class _UserMoreListState extends State<UserMoreList> {
               ),
             ),
             const SizedBox(height: 30),
-            Text(
+            const Text(
               "More",
               style: TextStyle(
                 fontSize: 24,
@@ -90,7 +90,7 @@ class _UserMoreListState extends State<UserMoreList> {
             const SizedBox(height: 20),
             SettingDetails(
               title: "Account",
-              img: "assets/imges/location.png",
+              img: "assets/imges/user.png",
               onTap: () {},
             ),
             const SizedBox(height: 10),
@@ -99,58 +99,69 @@ class _UserMoreListState extends State<UserMoreList> {
               img: "assets/imges/location.png",
               onTap: () {},
             ),
+            const SizedBox(height: 10),
             SettingDetails(
-              title: "Map",
+              title: "Eco Edu",
               img: "assets/imges/location.png",
               onTap: () {},
             ),
             const SizedBox(height: 10),
             SettingDetails(
-              title: "Map",
-              img: "assets/imges/location.png",
-              onTap: () {},
-            ),
-            SettingDetails(
-              title: "Map",
+              title: "Instructions",
               img: "assets/imges/location.png",
               onTap: () {},
             ),
             const SizedBox(height: 10),
             SettingDetails(
-              title: "Map",
-              img: "assets/imges/location.png",
-              onTap: () {},
-            ),
-            SettingDetails(
-              title: "Map",
+              title: "QR Scan",
               img: "assets/imges/location.png",
               onTap: () {},
             ),
             const SizedBox(height: 10),
             SettingDetails(
-              title: "Map",
-              img: "assets/imges/location.png",
-              onTap: () {},
-            ),
-            SettingDetails(
-              title: "Map",
+              title: "Bin Status",
               img: "assets/imges/location.png",
               onTap: () {},
             ),
             const SizedBox(height: 10),
             SettingDetails(
-              title: "Map",
-              img: "assets/imges/location.png",
-              onTap: () {},
-            ),
-            SettingDetails(
-              title: "Map",
+              title: "Categories",
               img: "assets/imges/location.png",
               onTap: () {},
             ),
             const SizedBox(height: 10),
             SettingDetails(
-              title: "Map",
+              title: "Nearest Bin",
+              img: "assets/imges/location.png",
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            SettingDetails(
+              title: "Buy Items",
+              img: "assets/imges/location.png",
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            SettingDetails(
+              title: "Chat",
+              img: "assets/imges/location.png",
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            SettingDetails(
+              title: "Feedback",
+              img: "assets/imges/location.png",
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            SettingDetails(
+              title: "Issue Report",
+              img: "assets/imges/location.png",
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            SettingDetails(
+              title: "Collected Places",
               img: "assets/imges/location.png",
               onTap: () {},
             ),
