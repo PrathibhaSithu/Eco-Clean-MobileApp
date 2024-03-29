@@ -1,3 +1,4 @@
+import 'package:eco_clean_mobile_app/user/xaccountsetting.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -21,7 +22,8 @@ class _UserMoreListState extends State<UserMoreList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(onPressed: (){},
+        leading: IconButton(
+          onPressed: () {},
           icon: const Icon(Ionicons.chevron_back_outline),
         ),
         leadingWidth: 60,
@@ -30,14 +32,13 @@ class _UserMoreListState extends State<UserMoreList> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Settings",
-              style: TextStyle(
-                  fontSize: 36,
-                  fontWeight: FontWeight.bold
-              ),
+            Text(
+              "Settings",
+              style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 40),
-            Text("Account",
+            Text(
+              "Account",
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w500,
@@ -47,7 +48,8 @@ class _UserMoreListState extends State<UserMoreList> {
               width: double.infinity,
               child: Row(
                 children: [
-                  Image.asset("assets/imges/user.png",
+                  Image.asset(
+                    "assets/imges/user.png",
                     height: 60,
                   ),
                   const SizedBox(width: 20),
@@ -66,24 +68,16 @@ class _UserMoreListState extends State<UserMoreList> {
                             color: Color(0xFF418E3C),
                             fontWeight: FontWeight.w500,
                           )),
-                    ],),
+                    ],
+                  ),
                   const Spacer(),
-                  Container(
-                    width: 60,
-                    height: 60,
-                    decoration: BoxDecoration(
-                      color: Color(0xFFC4E8C2),
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    child: const Icon(
-                      Ionicons.chevron_forward_outline,
-                    ),
-                  )
+                  AccountSettings()
                 ],
               ),
             ),
             const SizedBox(height: 30),
-            Text("More",
+            Text(
+              "More",
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w500,
@@ -108,25 +102,16 @@ class _UserMoreListState extends State<UserMoreList> {
                       )),
                   const Spacer(),
                   Text("Eng"),
-                  Container(
-                    width: 40,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      color: Color(0xFFC4E8C2),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: const Icon(
-                      Ionicons.chevron_forward_outline,
-                    ),
-                  )
+                  const SizedBox(width: 10),
+                  
                 ],
-
               ),
             ),
-          ],),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (()=> signout()),
+        onPressed: (() => signout()),
         child: const Icon(Icons.login_rounded),
       ),
     );
