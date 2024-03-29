@@ -1,5 +1,6 @@
 import 'package:eco_clean_mobile_app/user/forwardbutton.dart';
 import 'package:eco_clean_mobile_app/user/forwardbuttonmini.dart';
+import 'package:eco_clean_mobile_app/user/moresettingdetails.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -72,7 +73,9 @@ class _UserMoreListState extends State<UserMoreList> {
                     ],
                   ),
                   const Spacer(),
-                  ForwardButton(),
+                  ForwardButton(
+                    onTap: () {},
+                  ),
                 ],
               ),
             ),
@@ -85,28 +88,10 @@ class _UserMoreListState extends State<UserMoreList> {
               ),
             ),
             const SizedBox(height: 20),
-            Container(
-              width: double.infinity,
-              child: Row(
-                children: [
-                  Container(
-                    child: Image.asset(
-                      "assets/imges/location.png",
-                      height: 60,
-                    ),
-                  ),
-                  const SizedBox(width: 30),
-                  const Text("Map",
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.w500,
-                      )),
-                  const Spacer(),
-                  Text("Eng"),
-                  const SizedBox(width: 10),
-                  ForwardButtonMini(),
-                ],
-              ),
+            SettingDetails(
+              title: "Map",
+              img: "assets/imges/location.png",
+              onTap: () {},
             ),
           ],
         ),

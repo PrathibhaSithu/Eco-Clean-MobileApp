@@ -3,25 +3,24 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:ionicons/ionicons.dart';
 
-class ForwardButton extends StatefulWidget {
-  const ForwardButton({super.key});
+class ForwardButton extends StatelessWidget {
+  final Function() onTap;
+  const ForwardButton({super.key, required this.onTap});
 
-  @override
-  State<ForwardButton> createState() => _ForwardButtonState();
-}
-
-class _ForwardButtonState extends State<ForwardButton> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 60,
-      height: 60,
-      decoration: BoxDecoration(
-        color: Color(0xFFC4E8C2),
-        borderRadius: BorderRadius.circular(30),
-      ),
-      child: const Icon(
-        Ionicons.chevron_forward_outline,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 60,
+        height: 60,
+        decoration: BoxDecoration(
+          color: Color(0xFFC4E8C2),
+          borderRadius: BorderRadius.circular(30),
+        ),
+        child: const Icon(
+          Ionicons.chevron_forward_outline,
+        ),
       ),
     );
   }
