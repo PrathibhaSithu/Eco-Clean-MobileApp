@@ -34,12 +34,12 @@ class _UserMoreListState extends State<UserMoreList> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               "Settings",
               style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 40),
-            Text(
+            const Text(
               "Account",
               style: TextStyle(
                 fontSize: 24,
@@ -59,12 +59,12 @@ class _UserMoreListState extends State<UserMoreList> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('${user!.email}',
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 22,
                             fontWeight: FontWeight.w500,
                           )),
                       const SizedBox(height: 10),
-                      Text("User",
+                      const Text("User",
                           style: TextStyle(
                             fontSize: 16,
                             color: Color(0xFF418E3C),
