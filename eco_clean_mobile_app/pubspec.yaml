@@ -38,6 +38,7 @@ dependencies:
   firebase_core: ^2.27.1
   firebase_auth: ^4.17.9
   flutter_svg: ^1.0.0
+  ionicons: ^0.2.2
 
 dev_dependencies:
   flutter_test:

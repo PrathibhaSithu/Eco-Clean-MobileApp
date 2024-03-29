@@ -19,8 +19,10 @@ class _UserMoreListState extends State<UserMoreList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      body: const Center(
+        child: SingleChildScrollView(
         child: Text('Shopping'),
+      ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (()=> signout()),
