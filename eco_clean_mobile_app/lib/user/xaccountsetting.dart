@@ -13,6 +13,16 @@ class AccountSettings extends StatefulWidget {
 class _AccountSettingsState extends State<AccountSettings> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      width: 60,
+      height: 60,
+      decoration: BoxDecoration(
+        color: Color(0xFFC4E8C2),
+        borderRadius: BorderRadius.circular(30),
+      ),
+      child: const Icon(
+        Ionicons.chevron_forward_outline,
+      ),
+    );
   }
 }
