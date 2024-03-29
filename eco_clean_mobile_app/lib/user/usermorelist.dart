@@ -1,4 +1,5 @@
-import 'package:eco_clean_mobile_app/user/xaccountsetting.dart';
+import 'package:eco_clean_mobile_app/user/forwardbutton.dart';
+import 'package:eco_clean_mobile_app/user/forwardbuttonmini.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -71,7 +72,7 @@ class _UserMoreListState extends State<UserMoreList> {
                     ],
                   ),
                   const Spacer(),
-                  AccountSettings()
+                  ForwardButton(),
                 ],
               ),
             ),
@@ -103,7 +104,7 @@ class _UserMoreListState extends State<UserMoreList> {
                   const Spacer(),
                   Text("Eng"),
                   const SizedBox(width: 10),
-                  
+                  ForwardButtonMini(),
                 ],
               ),
             ),
