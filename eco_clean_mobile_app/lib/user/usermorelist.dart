@@ -34,12 +34,12 @@ class _UserMoreListState extends State<UserMoreList> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               "Settings",
               style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 40),
-            Text(
+            const Text(
               "Account",
               style: TextStyle(
                 fontSize: 24,
@@ -59,12 +59,12 @@ class _UserMoreListState extends State<UserMoreList> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('${user!.email}',
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 22,
                             fontWeight: FontWeight.w500,
                           )),
                       const SizedBox(height: 10),
-                      Text("User",
+                      const Text("User",
                           style: TextStyle(
                             fontSize: 16,
                             color: Color(0xFF418E3C),
@@ -80,7 +80,7 @@ class _UserMoreListState extends State<UserMoreList> {
               ),
             ),
             const SizedBox(height: 30),
-            Text(
+            const Text(
               "More",
               style: TextStyle(
                 fontSize: 24,
@@ -89,8 +89,80 @@ class _UserMoreListState extends State<UserMoreList> {
             ),
             const SizedBox(height: 20),
             SettingDetails(
+              title: "Account",
+              img: "assets/imges/user.png",
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            SettingDetails(
               title: "Map",
               img: "assets/imges/location.png",
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            SettingDetails(
+              title: "Eco Edu",
+              img: "assets/imges/ecoedu.png",
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            SettingDetails(
+              title: "Instructions",
+              img: "assets/imges/instruction.png",
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            SettingDetails(
+              title: "QR Scan",
+              img: "assets/imges/qrscan.png",
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            SettingDetails(
+              title: "Bin Status",
+              img: "assets/imges/binstatus.png",
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            SettingDetails(
+              title: "Categories",
+              img: "assets/imges/garbagecat.png",
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            SettingDetails(
+              title: "Nearest Bin",
+              img: "assets/imges/nearest bin.png",
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            SettingDetails(
+              title: "Buy Items",
+              img: "assets/imges/buy.png",
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            SettingDetails(
+              title: "Chat",
+              img: "assets/imges/chat.png",
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            SettingDetails(
+              title: "Feedback",
+              img: "assets/imges/feedback.png",
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            SettingDetails(
+              title: "Issue Report",
+              img: "assets/imges/issue.png",
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            SettingDetails(
+              title: "Collected Places",
+              img: "assets/imges/collectbins.png",
               onTap: () {},
             ),
           ],
