@@ -55,14 +55,79 @@ class _UserMoreListState extends State<UserMoreList> {
                   children: [
                     Text('${user!.email}',
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 22,
                       fontWeight: FontWeight.w500,
-                    )
-                    ),
-                  ],
-                ),//child:
+                    )),
+                    const SizedBox(height: 10),
+                    Text("User",
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Color(0xFF418E3C),
+                          fontWeight: FontWeight.w500,
+                        )),
+                  ],),
+                const Spacer(),
+                Container(
+                  width: 60,
+                  height: 60,
+                  decoration: BoxDecoration(
+                    color: Color(0xFFC4E8C2),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: const Icon(
+                    Ionicons.chevron_forward_outline,
+                  ),
+                )
               ],
-            ),)
+            ),
+          ),
+          const SizedBox(height: 40),
+          Text("More",
+            style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.w500,
+            ),
+          ),
+          const SizedBox(height: 20),
+          Container(
+            width: double.infinity,
+            child: Row(
+              children: [
+                Image.asset("assets/imges/privacy.png",
+                  height: 50,
+                ),
+                const SizedBox(width: 20),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Privacy",
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.w500,
+                        )),
+                    const SizedBox(height: 10),
+                    Text("Privacy Policy",
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Color(0xFF418E3C),
+                          fontWeight: FontWeight.w500,
+                        )),
+                  ],),
+                const Spacer(),
+                Container(
+                  width: 60,
+                  height: 60,
+                  decoration: BoxDecoration(
+                    color: Color(0xFFC4E8C2),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: const Icon(
+                    Ionicons.chevron_forward_outline,
+                  ),
+                )
+              ],
+            ),
+          ),
         ],),
       floatingActionButton: FloatingActionButton(
         onPressed: (()=> signout()),
