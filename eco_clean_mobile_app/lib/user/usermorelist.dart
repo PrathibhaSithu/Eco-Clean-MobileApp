@@ -89,6 +89,67 @@ class _UserMoreListState extends State<UserMoreList> {
             ),
             const SizedBox(height: 20),
             SettingDetails(
+              title: "Account",
+              img: "assets/imges/location.png",
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            SettingDetails(
+              title: "Map",
+              img: "assets/imges/location.png",
+              onTap: () {},
+            ),
+            SettingDetails(
+              title: "Map",
+              img: "assets/imges/location.png",
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            SettingDetails(
+              title: "Map",
+              img: "assets/imges/location.png",
+              onTap: () {},
+            ),
+            SettingDetails(
+              title: "Map",
+              img: "assets/imges/location.png",
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            SettingDetails(
+              title: "Map",
+              img: "assets/imges/location.png",
+              onTap: () {},
+            ),
+            SettingDetails(
+              title: "Map",
+              img: "assets/imges/location.png",
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            SettingDetails(
+              title: "Map",
+              img: "assets/imges/location.png",
+              onTap: () {},
+            ),
+            SettingDetails(
+              title: "Map",
+              img: "assets/imges/location.png",
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            SettingDetails(
+              title: "Map",
+              img: "assets/imges/location.png",
+              onTap: () {},
+            ),
+            SettingDetails(
+              title: "Map",
+              img: "assets/imges/location.png",
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            SettingDetails(
               title: "Map",
               img: "assets/imges/location.png",
               onTap: () {},
