@@ -13,6 +13,8 @@ class EditAccountSetting extends StatefulWidget {
 }
 
 class _EditAccountSettingState extends State<EditAccountSetting> {
+  final user = FirebaseAuth.instance.currentUser;
+
   String gender = "man";
   @override
   Widget build(BuildContext context) {
@@ -31,11 +33,11 @@ class _EditAccountSettingState extends State<EditAccountSetting> {
                 child: IconButton(
                   onPressed: () {},
                   style: IconButton.styleFrom(
-                    backgroundColor: Colors.lightBlueAccent,
+                    backgroundColor: Color(0xFF97D093),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
-                    fixedSize: Size(60, 50),
+                    fixedSize: Size(50, 50),
                     elevation: 3,
                   ),
                   icon: Icon(Ionicons.checkmark, color: Colors.white),
@@ -62,7 +64,7 @@ class _EditAccountSettingState extends State<EditAccountSetting> {
                     widget: Column(
                       children: [
                         Image.asset(
-                          "assets/avatar.png",
+                          "assets/imges/user.png",
                           height: 100,
                           width: 100,
                         ),

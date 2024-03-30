@@ -1,6 +1,19 @@
 import 'package:eco_clean_mobile_app/user/forwardbutton.dart';
 import 'package:eco_clean_mobile_app/user/forwardbuttonmini.dart';
 import 'package:eco_clean_mobile_app/user/moresettingdetails.dart';
+import 'package:eco_clean_mobile_app/user/settingeditaccount.dart';
+import 'package:eco_clean_mobile_app/user/usercategories.dart';
+import 'package:eco_clean_mobile_app/user/userlocation.dart';
+import 'package:eco_clean_mobile_app/user/usermorepagenav/morebinstat.dart';
+import 'package:eco_clean_mobile_app/user/usermorepagenav/morechat.dart';
+import 'package:eco_clean_mobile_app/user/usermorepagenav/morecollectedplaces.dart';
+import 'package:eco_clean_mobile_app/user/usermorepagenav/moreecoedu.dart';
+import 'package:eco_clean_mobile_app/user/usermorepagenav/morefeedback.dart';
+import 'package:eco_clean_mobile_app/user/usermorepagenav/moreinstructions.dart';
+import 'package:eco_clean_mobile_app/user/usermorepagenav/moreissuereport.dart';
+import 'package:eco_clean_mobile_app/user/usermorepagenav/morenearestbin.dart';
+import 'package:eco_clean_mobile_app/user/usermorepagenav/moreqrscan.dart';
+import 'package:eco_clean_mobile_app/user/usershopping.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -75,9 +88,12 @@ class _UserMoreListState extends State<UserMoreList> {
                       ],
                     ),
                     const Spacer(),
-                    ForwardButton(
-                      onTap: () {},
-                    ),
+                    // ForwardButton(
+                    //   onTap: () {
+                    //     Navigator.push(context, MaterialPageRoute(builder: (context) => const EditAccountSetting(),
+                    //     ));
+                    //   },
+                    // ),
                   ],
                 ),),
               const SizedBox(height: 30),
@@ -92,79 +108,127 @@ class _UserMoreListState extends State<UserMoreList> {
               SettingDetails(
                 title: "Account",
                 img: "assets/imges/user.png",
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const EditAccountSetting(),
+                  ));
+                },
               ),
               const SizedBox(height: 10),
               SettingDetails(
                 title: "Map",
                 img: "assets/imges/location.png",
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const UserLocation(),
+                  ));
+                },
               ),
               const SizedBox(height: 10),
               SettingDetails(
                 title: "Eco Edu",
                 img: "assets/imges/ecoedu.png",
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const MoreEcoEdu(),
+                  ));
+                },
               ),
               const SizedBox(height: 10),
               SettingDetails(
                 title: "Instructions",
                 img: "assets/imges/instruction.png",
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const UserInstruction(),
+                  ));
+                },
               ),
               const SizedBox(height: 10),
               SettingDetails(
                 title: "QR Scan",
                 img: "assets/imges/qrscan.png",
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const QRScan(),
+                  ));
+                },
               ),
               const SizedBox(height: 10),
               SettingDetails(
                 title: "Bin Status",
                 img: "assets/imges/binstatus.png",
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const UserBinStatus(),
+                  ));
+                },
               ),
               const SizedBox(height: 10),
               SettingDetails(
                 title: "Categories",
                 img: "assets/imges/garbagecat.png",
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const UserCategories(),
+                  ));
+                },
               ),
               const SizedBox(height: 10),
               SettingDetails(
                 title: "Nearest Bin",
                 img: "assets/imges/nearest bin.png",
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const NearestBinTrack(),
+                  ));
+                },
               ),
               const SizedBox(height: 10),
               SettingDetails(
                 title: "Buy Items",
                 img: "assets/imges/buy.png",
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const UserShopping(),
+                  ));
+                },
               ),
               const SizedBox(height: 10),
               SettingDetails(
                 title: "Chat",
                 img: "assets/imges/chat.png",
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const UserChat(),
+                  ));
+                },
               ),
               const SizedBox(height: 10),
               SettingDetails(
                 title: "Feedback",
                 img: "assets/imges/feedback.png",
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const FeedbackPage(),
+                  ));
+                },
               ),
               const SizedBox(height: 10),
               SettingDetails(
                 title: "Issue Report",
                 img: "assets/imges/issue.png",
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const IssueReport(),
+                  ));
+                },
               ),
               const SizedBox(height: 10),
               SettingDetails(
                 title: "Collected Places",
                 img: "assets/imges/collectbins.png",
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const CollectedPlaces(),
+                  ));
+                },
+              ),
+              const SizedBox(height: 10),
+              SettingDetails(
+                title: "Temp",
+                img: "assets/imges/collectbins.png",
+                 onTap: () {
+                //   Navigator.push(context, MaterialPageRoute(builder: (context) => const CollectedPlaces(),
+                //   ));
+                 },
               ),
             ],
           ),
