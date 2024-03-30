@@ -3,6 +3,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class CollectorMap extends StatefulWidget {
   const CollectorMap({super.key});
+
   @override
   _CollectorMapState createState() => _CollectorMapState();
 }
@@ -10,7 +11,7 @@ class CollectorMap extends StatefulWidget {
 class _CollectorMapState extends State<CollectorMap> {
   late GoogleMapController mapController;
 
-  final LatLng _center = const LatLng(-33.86, 151.20);
+  final LatLng _center = const LatLng(6.90356, 79.86129);
 
   void _onMapCreated(GoogleMapController controller) {
     mapController = controller;
@@ -28,15 +29,15 @@ class _CollectorMapState extends State<CollectorMap> {
         body: GoogleMap(
           initialCameraPosition: CameraPosition(
             target: _center,
-            zoom: 13,
+            zoom: 14,
           ),
           markers: {
             Marker(
-              markerId: MarkerId("Sydney"),
+              markerId: MarkerId("SLIIT"),
               position: _center,
               infoWindow: InfoWindow(
-                title: "Sydney",
-                snippet: "Capital of New South Wales",
+                title: "SLIIT",
+                snippet: "Sri Lanka Institute of Information Technology",
               ),
             ),
           },
