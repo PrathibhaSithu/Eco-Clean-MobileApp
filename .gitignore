@@ -3,3 +3,4 @@ eco_clean_mobile_app/.firebaserc
 eco_clean_mobile_app/firebase.json
 eco_clean_mobile_app/firestore.rules
 eco_clean_mobile_app/firestore.indexes.json
+eco_clean_mobile_app/database.rules.json
