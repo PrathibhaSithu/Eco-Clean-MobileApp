@@ -5,7 +5,6 @@ import 'package:eco_clean_mobile_app/wrapper.dart';
 import 'firebase_options.dart';
 
 
-
 void main() async{
   runApp(MyApp());
   await Firebase.initializeApp(options: DefaultFirebaseOptions.android);

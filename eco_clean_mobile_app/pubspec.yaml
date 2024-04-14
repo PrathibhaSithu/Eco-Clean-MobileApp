@@ -39,6 +39,8 @@ dependencies:
   firebase_auth: ^4.17.9
   flutter_svg: ^1.0.0
   ionicons: ^0.2.2
+  uuid: ^4.4.0
+  intl: ^0.19.0
 
 dev_dependencies:
   flutter_test:
