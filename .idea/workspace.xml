@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbbea110-d79d-4ecd-8c25-869c826a50d3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Eco-Clean-MobileApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Eco-Clean-MobileApp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eco_clean_mobile_app/lib/admin/adminmap.dart" beforeDir="false" afterPath="$PROJECT_DIR$/eco_clean_mobile_app/lib/admin/adminmap.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eco_clean_mobile_app/lib/collector/collectormap.dart" beforeDir="false" afterPath="$PROJECT_DIR$/eco_clean_mobile_app/lib/collector/collectormap.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eco_clean_mobile_app/lib/navbar/bottomnavadmin.dart" beforeDir="false" afterPath="$PROJECT_DIR$/eco_clean_mobile_app/lib/navbar/bottomnavadmin.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eco_clean_mobile_app/lib/user/userlocation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/eco_clean_mobile_app/lib/user/userlocation.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eco_clean_mobile_app/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/eco_clean_mobile_app/test/widget_test.dart" afterDir="false" />
-    </list>
+    <list default="true" id="cbbea110-d79d-4ecd-8c25-869c826a50d3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

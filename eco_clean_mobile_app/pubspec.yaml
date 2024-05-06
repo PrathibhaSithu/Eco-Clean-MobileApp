@@ -39,6 +39,7 @@ dependencies:
   firebase_auth: ^4.17.9
   flutter_svg: ^1.0.0
   google_maps_flutter: ^2.6.0
+  geolocator: ^8.2.0
 
 
 dev_dependencies:
