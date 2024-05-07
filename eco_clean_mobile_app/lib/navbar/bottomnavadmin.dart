@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-import '../admin/admindashboard.dart';
+//import '../admin/admindashboard.dart';
 import '../admin/adminhome.dart';
 import '../admin/adminmorelist.dart';
 import '../admin/adminmap.dart';
@@ -19,7 +19,7 @@ class _BottomNavAdminState extends State<BottomNavAdmin> {
   int myCurrentIndex = 0;
   List pages = const[
     AdminHome(),
-    AdminDashboard(),
+    //AdminDashboard(),
     AdminMap(),
     AdminNotification(),
     AdminMoreList()
@@ -55,11 +55,11 @@ class _BottomNavAdminState extends State<BottomNavAdmin> {
                 icon: Image.asset('assets/icons/home.png', width: 24, height: 24),
                 label: "Home",
               ),
-              BottomNavigationBarItem(
+              /*BottomNavigationBarItem(
                 icon: Image.asset('assets/icons/admin-dash.png', width: 24, height: 24),
                 label: 'Dashboard',
-              ),
-              BottomNavigationBarItem(
+              ),*/
+             BottomNavigationBarItem(
                 icon: Image.asset('assets/icons/location.png', width: 24, height: 24),
                 label: 'Map',
               ),

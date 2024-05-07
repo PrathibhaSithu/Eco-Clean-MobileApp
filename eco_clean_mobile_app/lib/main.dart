@@ -8,7 +8,10 @@ import 'firebase_options.dart';
 void main() async{
   runApp(MyApp());
   await Firebase.initializeApp(options: DefaultFirebaseOptions.android);
+  WidgetsFlutterBinding.ensureInitialized();
 }
+
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

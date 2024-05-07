@@ -154,7 +154,7 @@ class GarbageTile extends StatelessWidget {
                     Expanded(
                       child: Center(
                         child: Text(
-                          garbage.amount,
+                          garbage.amount.toString(),
                           style: Theme.of(context).textTheme.bodyText2,
                         ),
                       ),

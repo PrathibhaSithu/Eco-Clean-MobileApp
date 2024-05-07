@@ -47,7 +47,7 @@ class GarbageModel {
 
   final String id;
   final String title;
-  final String amount;
+  final double amount;
   final DateTime date;
   final Category category;
 

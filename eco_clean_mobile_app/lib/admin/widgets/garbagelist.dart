@@ -4,8 +4,9 @@ import 'package:eco_clean_mobile_app/admin/widgets/garbagetile.dart';
 import 'package:flutter/material.dart';
 
 class GarbageList extends StatelessWidget {
-  const GarbageList({super.key, required this.garbageList});
+  const GarbageList({super.key, required this.garbageList, required this.onDeleteGarbage});
 
+  final void Function (GarbageModel garbage) onDeleteGarbage;
   final List<GarbageModel> garbageList;
 
   @override
@@ -25,8 +26,15 @@ class GarbageList extends StatelessWidget {
                padding: const EdgeInsets.symmetric(
                  vertical: 5,
                ),
-               child: GarbageTile(
-                 garbage: garbageList[index],
+               child: Dismissible(
+                 key: ValueKey(garbageList[index]),
+                 direction: DismissDirection.startToEnd,
+                 onDismissed: (direction){
+                   onDeleteGarbage(garbageList[index]);
+                 },
+                 child: GarbageTile(
+                   garbage: garbageList[index],
+                 ),
                ),
              );
         },
