@@ -70,6 +70,7 @@ void addnewbin(BuildContext context) {
               SizedBox(height: 10),
               TextField(
                 controller: latitudeController,
+                keyboardType: TextInputType.numberWithOptions(decimal: true),
                 decoration: InputDecoration(
                   labelText: "Latitude",
                   hintText: "Enter Latitude",
@@ -78,6 +79,7 @@ void addnewbin(BuildContext context) {
               SizedBox(height: 10),
               TextField(
                 controller: longitudeController,
+                keyboardType: TextInputType.numberWithOptions(decimal: true),
                 decoration: InputDecoration(
                   labelText: "Longitude",
                   hintText: "Enter Longitude",
@@ -143,8 +145,8 @@ void addnewbin(BuildContext context) {
                           "city": cityController.text.toString(),
                           "road": roadController.text.toString(),
                           "landmark": landmarkController.text.toString(),
-                          "latitude": landmarkController.text.toString(),
-                          "longitude": landmarkController.text.toString(),
+                          "latitude": double.parse(latitudeController.text),
+                          "longitude": double.parse(longitudeController.text),
                           "cleaningperiod": cleaningperiodController.text.toString(),
                           "id": id
                         });

@@ -5,3 +5,4 @@ eco_clean_mobile_app/firestore.rules
 eco_clean_mobile_app/firestore.indexes.json
 eco_clean_mobile_app/database.rules.json
 .idea/misc.xml
+.idea/misc.xml

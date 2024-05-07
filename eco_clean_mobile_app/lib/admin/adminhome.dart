@@ -312,8 +312,14 @@ class AdminHome extends StatefulWidget {
   State<AdminHome> createState() => _AdminHomeState();
 }
 
+
+
 class _AdminHomeState extends State<AdminHome> {
   final user = FirebaseAuth.instance.currentUser;
+
+  signout() async {
+  await FirebaseAuth.instance.signOut();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -324,8 +330,8 @@ class _AdminHomeState extends State<AdminHome> {
           children: [
             Image.asset(
               'assets/imges/ecoclean.png',
-              height: 100,
-              width: 200,
+              height: 120,
+              width: 220,
             ),
           ],
         ),
@@ -337,15 +343,16 @@ class _AdminHomeState extends State<AdminHome> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const  EdgeInsets.only(top: 50.0, bottom: 10.0, left: 10.0, right: 10.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
                     "Hi Admin",
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic,
                     ),
                   ),
                   const SizedBox(height: 10),
@@ -362,7 +369,7 @@ class _AdminHomeState extends State<AdminHome> {
 
             Expanded(
               child: GridView(
-                padding: EdgeInsets.only(top: 20.0, bottom: 10.0, left: 10.0, right: 10.0),
+                padding: EdgeInsets.only(top: 50.0, bottom: 10.0, left: 10.0, right: 10.0),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   mainAxisSpacing: 10,
@@ -468,6 +475,44 @@ class _AdminHomeState extends State<AdminHome> {
                       ),
                     ),
                   ),
+
+                  Stack(
+                    children: [
+                      SizedBox(
+                        width: 200, // Set your desired width here
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: const Color(0xFFC4E8C2),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Positioned(
+                                bottom: 16,
+                                right: 16,
+                                child: FloatingActionButton(
+                                  onPressed: () => signout(),
+                                  child: const Icon(Icons.login_rounded),
+                                  //backgroundColor: Color(0xFF4CA547),
+                                ),
+                              ),
+                              const Text(
+                                "Signout",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+
+
                 ],
               ),
             ),
@@ -477,5 +522,6 @@ class _AdminHomeState extends State<AdminHome> {
     );
   }
 }
+
 
 

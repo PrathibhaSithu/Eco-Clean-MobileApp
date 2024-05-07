@@ -133,16 +133,16 @@ class _BinState extends State<bin> {
                 final cleaningPeriod = snapshot.child("cleaningperiod").value.toString().toLowerCase();
                 final id = snapshot.child("id").value.toString();
                 final landmark = snapshot.child("landmark").value.toString().toLowerCase();
-                final latitude = snapshot.child("latitude").value.toString().toLowerCase();
-                final longitude = snapshot.child("longitude").value.toString().toLowerCase();
+                 final double latitude = double.parse(snapshot.child("latitude").value.toString());
+                final double longitude = double.parse(snapshot.child("longitude").value.toString());
 
                 if (city.contains(searchText.toLowerCase()) ||
                     road.contains(searchText.toLowerCase()) ||
                     cleaningPeriod.contains(searchText.toLowerCase()) ||
                     id.contains(searchText.toLowerCase()) ||
                     landmark.contains(searchText.toLowerCase()) ||
-                    latitude.contains(searchText.toLowerCase()) ||
-                    longitude.contains(searchText.toLowerCase()) ) {
+                   latitude.toString().contains(searchText.toLowerCase()) ||
+                    longitude.toString().contains(searchText.toLowerCase())) {
                   return Card(
                     color: Color(0xFFC4E8C2),
                     shape: RoundedRectangleBorder(
@@ -162,8 +162,8 @@ class _BinState extends State<bin> {
                         children: [
                           Text(snapshot.child("road").value.toString()),
                           Text(snapshot.child("landmark").value.toString()),
-                          Text(snapshot.child("latitude").value.toString()),
-                          Text(snapshot.child("longitude").value.toString()),
+                          Text(latitude.toString()),
+                          Text(longitude.toString()),
                           Text(snapshot.child("cleaningperiod").value.toString()),
 
                         ],
@@ -196,8 +196,8 @@ class _BinState extends State<bin> {
                                   snapshot.child("road").value.toString(),
                                   id,
                                   snapshot.child("landmark").value.toString(),
-                                  snapshot.child("latitude").value.toString(),
-                                  snapshot.child("longitude").value.toString(),
+                                   latitude,
+                                  longitude,
                                   snapshot.child("cleaningperiod").value.toString(),
                                 );
                               },
