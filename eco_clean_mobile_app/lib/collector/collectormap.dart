@@ -25,39 +25,71 @@ class _CollectorMapState extends State<CollectorMap> {
     _binCollectDataRef = _database.reference().child('BinCollectData');
     _binDataRef = _database.reference().child('Bin Data');
     _loadFullBinIcon();
+    _loadBinCollectData();
     _binCollectDataRef.onChildChanged.listen(_onBinCollectDataChanged);
   }
 
+  Future<void> _loadBinCollectData() async {
+    _markers = {};
+    _binCollectDataRef.once().then((DatabaseEvent event) {
+      final data = Map<String, dynamic>.from(
+          event.snapshot.value as Map<Object?, Object?>);
+      if (data.isNotEmpty) {
+        for (final binId in data.keys) {
+          if (data[binId]['status'] == "full") {
+            _binDataRef.child(binId).once().then((DatabaseEvent event) {
+              final binData = Map<String, dynamic>.from(
+                  event.snapshot.value as Map<Object?, Object?>);
+              final lat = binData['latitude'];
+              final lng = binData['longitude'];
+              final title = 'Bin ${binData['id']}';
+              final snippet =
+                  'City: ${binData['city']}\nCleaning Period: ${binData['cleaningperiod']}\nLandmark: ${binData['landmark']}\nRoad: ${binData['road']}';
+              setState(() {
+                _markers.add(Marker(
+                  markerId: MarkerId(binId),
+                  position: LatLng(lat, lng),
+                  icon: _fullBinIcon!,
+                  infoWindow: InfoWindow(title: title, snippet: snippet),
+                ));
+              });
+            });
+          }
+        }
+      }
+    });
+  }
+
   Future<void> _loadFullBinIcon() async {
-    final imageBytes = await rootBundle.load('assets/full_bin.png');
+    final imageBytes = await rootBundle.load('assets/icons/full_bin.png');
     setState(() {
       _fullBinIcon =
           BitmapDescriptor.fromBytes(imageBytes.buffer.asUint8List());
     });
   }
 
-  void _onBinCollectDataChanged(DatabaseEvent event) async {
-    final data = event.snapshot.value as Map<String, dynamic>;
-    if (data['status'] == 'full') {
-      final binId = event.snapshot.key;
+  void _onBinCollectDataChanged(DatabaseEvent event) {
+    final data = Map<String, dynamic>.from(
+        event.snapshot.value as Map<Object?, Object?>);
+    final binId = event.snapshot.key;
+    if (data['status'] == "full") {
       if (binId != null) {
-        final binData = await _binDataRef.child(binId).once().then(
-            (DatabaseEvent event) =>
-                event.snapshot.value as Map<String, dynamic>);
-        final lat = double.parse(binData['latitude']);
-        final lng = double.parse(binData['longitude']);
-        final title = 'Bin ${binData['id']}';
-        final snippet =
-            'City: ${binData['city']}\nCleaning Period: ${binData['cleaningperiod']}\nLandmark: ${binData['landmark']}}';
-        setState(() {
-          _markers.add(
-            Marker(
+        _binDataRef.child(binId).once().then((DatabaseEvent event) {
+          final binData = Map<String, dynamic>.from(
+              event.snapshot.value as Map<Object?, Object?>);
+          final lat = binData['latitude'];
+          final lng = binData['longitude'];
+          final title = 'Bin ${binData['id']}';
+          final snippet =
+              'City: ${binData['city']}\nCleaning Period: ${binData['cleaningperiod']}\nLandmark: ${binData['landmark']}\nRoad: ${binData['road']}';
+          setState(() {
+            _markers.add(Marker(
               markerId: MarkerId(binId),
               position: LatLng(lat, lng),
-              infoWindow: InfoWindow(title: title, snippet: snippet),
               icon: _fullBinIcon!,
-            ),
-          );
+              infoWindow: InfoWindow(title: title, snippet: snippet),
+            ));
+          });
         });
       }
     }
@@ -71,7 +103,10 @@ class _CollectorMapState extends State<CollectorMap> {
       ),
       body: GoogleMap(
         initialCameraPosition: CameraPosition(
-          target: LatLng(6.91473382014879, 79.97293852226254), // Malabe coordinates
+          // target: LatLng(7.09216, 79.959995),
+          // Malabe coordinates
+          target: LatLng(6.91473382014879, 79.97293852226254),
+          // Malabe coordinates
           zoom: 15,
         ),
         markers: _markers,
