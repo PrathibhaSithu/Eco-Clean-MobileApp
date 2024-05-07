@@ -297,13 +297,11 @@ class _AdminHomeState extends State<AdminHome> {
 
 
 
-import 'package:eco_clean_mobile_app/admin/bin.dart';
-import 'package:eco_clean_mobile_app/admin/categorizegarbage.dart';
-import 'package:eco_clean_mobile_app/admin/reportcollection.dart';
+/*import 'package:eco_clean_mobile_app/admin/reportcollection.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-
+import 'bin.dart';
+import 'categorizegarbage.dart';
 
 class AdminHome extends StatefulWidget {
   const AdminHome({Key? key}) : super(key: key);
@@ -312,13 +310,11 @@ class AdminHome extends StatefulWidget {
   State<AdminHome> createState() => _AdminHomeState();
 }
 
-
-
 class _AdminHomeState extends State<AdminHome> {
   final user = FirebaseAuth.instance.currentUser;
 
   signout() async {
-  await FirebaseAuth.instance.signOut();
+    await FirebaseAuth.instance.signOut();
   }
 
   @override
@@ -335,15 +331,23 @@ class _AdminHomeState extends State<AdminHome> {
             ),
           ],
         ),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Colors.blue, Colors.green], // Set your desired colors here
+            ),
+          ),
+        ),
       ),
       body: Container(
         padding: const EdgeInsets.all(10.0),
-
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Padding(
-              padding: const  EdgeInsets.only(top: 50.0, bottom: 10.0, left: 10.0, right: 10.0),
+              padding: const EdgeInsets.only(top: 50.0, bottom: 10.0, left: 10.0, right: 10.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -359,14 +363,10 @@ class _AdminHomeState extends State<AdminHome> {
                   CircleAvatar(
                     backgroundImage: AssetImage('assets/imges/user.png'),
                     radius: 30,
-
                   ),
                 ],
               ),
             ),
-
-
-
             Expanded(
               child: GridView(
                 padding: EdgeInsets.only(top: 50.0, bottom: 10.0, left: 10.0, right: 10.0),
@@ -475,7 +475,6 @@ class _AdminHomeState extends State<AdminHome> {
                       ),
                     ),
                   ),
-
                   Stack(
                     children: [
                       SizedBox(
@@ -511,13 +510,251 @@ class _AdminHomeState extends State<AdminHome> {
                       ),
                     ],
                   ),
-
-
                 ],
               ),
             ),
           ],
         ),
+      ),
+    );
+  }
+}*/
+
+
+import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'bin.dart';
+import 'categorizegarbage.dart';
+import 'reportcollection.dart';
+
+class AdminHome extends StatefulWidget {
+  const AdminHome({Key? key}) : super(key: key);
+
+  @override
+  State<AdminHome> createState() => _AdminHomeState();
+}
+
+class _AdminHomeState extends State<AdminHome> {
+  final user = FirebaseAuth.instance.currentUser;
+
+  signout() async {
+    await FirebaseAuth.instance.signOut();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      /* appBar: AppBar(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Image.asset(
+              'assets/imges/ecoclean.png',
+              height: 120,
+              width: 220,
+            ),
+          ],
+        ),
+      ),*/
+      body: Column(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              color: Color(0xFF4CA547),
+              borderRadius: BorderRadius.only(
+                bottomRight: Radius.circular(50),
+                  bottomLeft: Radius.circular(50)
+              ),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.only(top: 20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/imges/ecoclean.png',
+                    height: 120,
+                    width: 220,
+                  ),
+                ],
+              ),
+            ),
+
+          ),
+          Column(
+            children: [
+              SizedBox(height: 50),
+              ListTile(
+                contentPadding: EdgeInsets.symmetric(horizontal: 30),
+                title: Text(
+                  'Hello Admin!',
+                  style: Theme.of(context).textTheme.headline6?.copyWith(
+                    color: Color(0xFF4CA547),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                subtitle: Text(
+                  'Good Morning',
+                  style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                    color: Color(0xFF4CA547),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                trailing: CircleAvatar(
+                  radius: 30,
+                  backgroundImage: AssetImage('assets/imges/user.png'),
+                ),
+              ),
+              SizedBox(height: 30),
+            ],
+          ),
+          Expanded(
+            child: GridView(
+              padding: EdgeInsets.all(10.0),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10,
+              ),
+              children: [
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => bin(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: const Color(0xFFC4E8C2),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'assets/imges/createbin.png',
+                          height: 70,
+                        ),
+                        const Text(
+                          "Create Bin",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => categorizegarbage(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: const Color(0xFFC4E8C2),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'assets/imges/categorize.png',
+                          height: 80,
+                        ),
+                        const Text(
+                          "Categorize Garbage",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ReportCollection(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: const Color(0xFFC4E8C2),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'assets/imges/report.png',
+                          height: 60,
+                        ),
+                        const Text(
+                          "Report Collection",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Stack(
+                  children: [
+                    SizedBox(
+                      width: 200, // Set your desired width here
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: const Color(0xFFC4E8C2),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Positioned(
+                              bottom: 16,
+                              right: 16,
+                              child: FloatingActionButton(
+                                onPressed: () => signout(),
+                                child: const Icon(Icons.login_rounded),
+                                //backgroundColor: Color(0xFF4CA547),
+                              ),
+                            ),
+                            const Text(
+                              "Signout",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
