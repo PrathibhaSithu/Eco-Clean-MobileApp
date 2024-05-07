@@ -1,8 +1,12 @@
-// import 'package:firebase_auth/firebase_auth.dart';
+
+import 'package:eco_clean_mobile_app/admin/Additem.dart';
+import 'package:eco_clean_mobile_app/admin/ItemHome.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:eco_clean_mobile_app/wrapper.dart';
 import 'firebase_options.dart';
+//import 'package:eco_clean_mobile_app/collector/collectorhome.dart';
 
 void main() async{
   runApp(MyApp());

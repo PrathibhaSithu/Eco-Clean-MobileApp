@@ -21,6 +21,7 @@ class _BottomNavCollectorState extends State<BottomNavCollector> {
     CollectorMap(),
     CollectorNotification(),
     CollectorMoreList()
+
   ];
 
   @override
