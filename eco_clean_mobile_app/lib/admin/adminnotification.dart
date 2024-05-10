@@ -14,7 +14,7 @@ class _AdminNotificationState extends State<AdminNotification> {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text('Locations'),
+        child: Text('Locations Update'),
       ),
     );
   }
