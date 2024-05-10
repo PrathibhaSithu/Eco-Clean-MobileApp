@@ -2,7 +2,7 @@
 #include <ESP8266WiFi.h>
 
 #define _SSID "Chiku"                                                            // Your WiFi SSID
-#define _PASSWORD "chatnoir"                                                              // Your WiFi Password
+#define _PASSWORD "kitty123"                                                              // Your WiFi Password
 #define REFERENCE_URL "https://eco-clean-b0119-default-rtdb.firebaseio.com/"  // Your Firebase project reference url
 
 Firebase firebase(REFERENCE_URL);
@@ -10,7 +10,7 @@ Firebase firebase(REFERENCE_URL);
 // Ultrasonic sensor parameters
 const int trigPin = D4;
 const int echoPin = D5;
-const String binnumber = "332";
+const String binnumber = "820";
 String status = "empty";
 
 
@@ -68,7 +68,7 @@ void loop() {
   if (!status.equals(checkBinStatus(distance))) {
     status = checkBinStatus(distance);
     // Send data to Firebase
-    if (firebase.setString("Bin/" + binnumber + "/status", status)) {
+    if (firebase.setString("BinCollectData/" + binnumber + "/status", status)) {
       Serial.print("Data sent to Firebase : ");
       Serial.println(distance);
     } else {

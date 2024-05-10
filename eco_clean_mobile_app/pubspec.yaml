@@ -37,6 +37,11 @@ dependencies:
   cupertino_icons: ^1.0.6
   firebase_core: ^2.27.1
   firebase_auth: ^4.17.9
+  firebase_database: ^10.5.4
+  flutter_svg: ^2.0.10+1
+  google_maps_flutter: ^2.6.0
+  geolocator: ^11.0.0
+
   flutter_svg: ^1.0.0
   ionicons: ^0.2.2
 
