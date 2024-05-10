@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="cbbea110-d79d-4ecd-8c25-869c826a50d3" name="Changes" comment="" />
     <list default="true" id="63f9025a-2260-4a2d-947f-05e776f6547b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +20,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2eNMygGHkc9Cq43Mt30vQCQlPzK" />
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -39,6 +44,19 @@
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Shashi-Collector-Location&quot;,
+    &quot;last_opened_file_path&quot;: &quot;S:/new pro/Eco-Clean-MobileApp&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cbbea110-d79d-4ecd-8c25-869c826a50d3" name="Changes" comment="" />
+      <created>1711740840820</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711740840820</updated>
     &quot;git-widget-placeholder&quot;: &quot;Prajila-Admin-Location&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/itpm/Eco-Clean-MobileApp1&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;dart.settings&quot;,
