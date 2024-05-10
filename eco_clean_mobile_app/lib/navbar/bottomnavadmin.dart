@@ -1,16 +1,13 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../admin/admindashboard.dart';
 import '../admin/adminhome.dart';
 import '../admin/adminmorelist.dart';
 import '../admin/adminmap.dart';
 import '../admin/adminnotification.dart';
+import '../admin/ItemHome.dart'; // Import ItemHome.dart
 
 class BottomNavAdmin extends StatefulWidget {
-  const BottomNavAdmin({super.key});
+  const BottomNavAdmin({Key? key}) : super(key: key);
 
   @override
   State<BottomNavAdmin> createState() => _BottomNavAdminState();
@@ -18,12 +15,15 @@ class BottomNavAdmin extends StatefulWidget {
 
 class _BottomNavAdminState extends State<BottomNavAdmin> {
   int myCurrentIndex = 0;
-  List pages = const[
+
+  // Define a list of pages
+  final List<Widget> pages = [
     AdminHome(),
     AdminDashboard(),
     AdminMap(),
     AdminNotification(),
-    AdminMoreList()
+    AdminMoreList(),
+    ItemHome(), // Add ItemHome() to the list
   ];
 
   @override
@@ -37,7 +37,8 @@ class _BottomNavAdminState extends State<BottomNavAdmin> {
               spreadRadius: 1,
               blurRadius: 35,
             ),
-          ],),
+          ],
+        ),
         margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(30),
@@ -46,30 +47,43 @@ class _BottomNavAdminState extends State<BottomNavAdmin> {
             selectedItemColor: const Color(0xFF418E3C),
             unselectedItemColor: const Color(0xFF000000),
             currentIndex: myCurrentIndex,
-            onTap: (index){
+            onTap: (index) {
               setState(() {
                 myCurrentIndex = index;
               });
+
+              // Navigation logic
+              if (index == 5) { // If the "More" icon is tapped (index 5)
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ItemHome()), // Navigate to ItemHome page
+                );
+              }
             },
             items: [
               BottomNavigationBarItem(
-                icon: Image.asset('assets/icons/home.png', width: 24, height: 24),
+                icon: Image.asset('assets/icons/home.png',
+                    width: 24, height: 24),
                 label: "Home",
               ),
               BottomNavigationBarItem(
-                icon: Image.asset('assets/icons/admin-dash.png', width: 24, height: 24),
+                icon: Image.asset('assets/icons/admin-dash.png',
+                    width: 24, height: 24),
                 label: 'Dashboard',
               ),
               BottomNavigationBarItem(
-                icon: Image.asset('assets/icons/location.png', width: 24, height: 24),
+                icon: Image.asset('assets/icons/location.png',
+                    width: 24, height: 24),
                 label: 'Map',
               ),
               BottomNavigationBarItem(
-                icon: Image.asset('assets/icons/bell.png', width: 24, height: 24),
+                icon: Image.asset('assets/icons/bell.png',
+                    width: 24, height: 24),
                 label: 'Notifications',
               ),
               BottomNavigationBarItem(
-                icon: Image.asset('assets/icons/cat.png', width: 24, height: 24),
+                icon: Image.asset('assets/icons/cat.png',
+                    width: 24, height: 24),
                 label: 'More',
               ),
             ],
