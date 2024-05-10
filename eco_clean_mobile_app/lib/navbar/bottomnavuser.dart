@@ -1,3 +1,4 @@
+import 'package:eco_clean_mobile_app/admin/ItemHome.dart';
 import 'package:eco_clean_mobile_app/user/usercategories.dart';
 import 'package:eco_clean_mobile_app/user/userlocation.dart';
 import 'package:eco_clean_mobile_app/user/usermorelist.dart';
@@ -5,6 +6,7 @@ import 'package:eco_clean_mobile_app/user/usershopping.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+//import 'package:eco_clean_mobile_app/admin/ItemHome.dart';
 
 import '../user/userhome.dart';
 
@@ -22,7 +24,8 @@ class _BottomNavUserState extends State<BottomNavUser> {
     UserLocation(),
     UserShopping(),
     UserCategories(),
-    UserMoreList()
+    UserMoreList(),
+    //ItemHome()
   ];
 
   @override
